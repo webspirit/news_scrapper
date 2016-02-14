@@ -29,7 +29,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'simple_form'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
-
+# Mutes assets pipeline log messages.
+gem 'quiet_assets', group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
