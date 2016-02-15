@@ -31,6 +31,8 @@ gem 'simple_form'
 gem 'devise'
 # Mutes assets pipeline log messages.
 gem 'quiet_assets', group: :development
+# URL Validation for Rails
+gem 'validate_url'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
