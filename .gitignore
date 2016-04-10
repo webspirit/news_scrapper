@@ -5,6 +5,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
+.byebug_history
 
 *.gem
 *.rbc
@@ -28,6 +29,7 @@ build/
 /_yardoc/
 /doc/
 /rdoc/
+.DS_Store
 
 ## Environment normalization:
 /.bundle/

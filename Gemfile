@@ -33,6 +33,8 @@ gem 'devise'
 gem 'quiet_assets', group: :development
 # URL Validation for Rails
 gem 'validate_url'
+# HTML, XML, SAX, and Reader parser with XPath and CSS selector support.
+gem 'nokogiri'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
