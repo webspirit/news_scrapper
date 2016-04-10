@@ -1,0 +1,28 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#homepage::after {
+  content: "";
+  background: url(<%= asset_path 'pre_login_background.jpg' %>) no-repeat top center fixed;
+  background-size: cover;
+  opacity: 1.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+#homepage {
+  h1 {
+    font-size: 46px;
+    color: white;
+  }
+
+  h3, h5 {
+    color: #e5e5e5;
+  }
+
+  .homepage-btn { margin: 20px 10px; }
+}

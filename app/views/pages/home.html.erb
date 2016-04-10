@@ -1,6 +1,11 @@
-<div class="text-center">
+<div class="text-center" id="homepage">
 	<h1>Newspaper Articles</h1>
 	<br>
-	<p>I wanted to save some articles for future reference. This application will be provided with a link and it will 'copy' the article I want to save for later.</p>
-	<%= link_to 'Create account', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+
+	<h3>Save Newspaper Articles for future reference.<br>
+	You only need to paste the article URL and save the automatically created article.</h3>
+	<h5>Only '<a href="http://www.theguardian.com/" target="_blank">The Guardian</a>' is supported.</h5>
+
+	<%= link_to 'Video demo', '/', class: 'btn btn-default btn-lg homepage-btn' %>
+	<%= link_to 'Create account', new_user_registration_path, class: 'btn btn-primary btn-lg homepage-btn' %>
 </div>
