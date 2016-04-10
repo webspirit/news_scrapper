@@ -1,5 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_tag new_article_path, method: 'get', class: 'form-inline' do %>
+  <div class='form-group'>
+    <%= label_tag 'URL' %>
+    <%= text_field_tag :search, params[:movie_url], class: 'form-control', placeholder: 'Guardian URL' %>
+    <%= submit_tag 'Scrape it', class: 'btn btn-default' %> 
+
+    or for manual entry:
+    <%= link_to "Create new Article", new_article_path, class: 'btn btn-default' %>
+  </div>
+<% end %>
+
 <h1>Listing Articles</h1>
 
 <table class="table">

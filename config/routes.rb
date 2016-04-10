@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :articles
   root 'pages#home'
+
+  resources :articles
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

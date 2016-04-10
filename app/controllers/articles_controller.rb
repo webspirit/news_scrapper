@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :scrape, only: :new
 
   # GET /articles
   # GET /articles.json
@@ -14,7 +15,22 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    if @article_data.failure == nil
+      @article = Article.new(
+        title: @article_data.title,
+        author: @article_data.author,
+        image_url: @article_data.image_url,
+        published_date: @article_data.published_date,
+        subtitle: @article_data.subtitle,
+        body: @article_data.body,
+        category: @article_data.category
+      )
+    else
+      @article = Article.new
+      if params[:search]
+        @failure = @article_data.failure
+      end
+    end
   end
 
   # GET /articles/1/edit
@@ -69,5 +85,10 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :author, :image_url, :published_date, :subtitle, :body, :category, :user_id)
+    end
+
+    def scrape
+      @article_data = Scrape.new
+      @article_data.scrape_new_article(params[:search].to_s)
     end
 end
