@@ -1,0 +1,10 @@
+<div class='form-group scrape-form'>
+  <%= form_tag new_article_path, method: 'get', class: 'form-inline' do %>
+    <%= label_tag 'URL' %>
+    <%= text_field_tag :search, params[:movie_url], class: 'form-control', placeholder: 'Guardian URL' %>
+    <%= submit_tag 'Scrape it', class: 'btn btn-primary' %> 
+
+    or for manual entry:
+    <%= link_to "Create new Article", new_article_path, class: 'btn btn-default' %>
+  <% end %>
+</div>

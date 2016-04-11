@@ -13,9 +13,14 @@
  *= require_tree .
  *= require_self
  */
+html {
+  position: relative;
+  min-height: 100%;
+}
 
- body {
+body {
  	font-family: 'Titillium Web', sans-serif;
+ 	margin-bottom: 30px;
  }
 
 .navbar { border-radius: 0; }
@@ -29,3 +34,5 @@ footer {
   padding: 5px;
   background-color: #f5f5f5;
 }
+
+.margin-bottom { margin-bottom: 50px;}
