@@ -6,7 +6,16 @@
     <%= f.input :author %>
     <%= image_tag @article.image_url %>
     <%= f.input :image_url %>
-    <%= f.input :published_date %>
+   
+    <%= f.label :published_date %>
+    <div class='input-group col-md-3'>
+      <%= f.text_field :published_date, class: 'form-control datepicker', value: (@article.published_date.blank? ? '' : @article.published_date.strftime('%d/%m/%Y')), 'data-date-format': "dd/mm/yyyy" %>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+
+
     <%= f.input :subtitle, as: :text, input_html: { rows: 2 } %>
     <%= f.input :body, as: :text, input_html: { rows: 10 } %>
     <%= f.input :category %>
